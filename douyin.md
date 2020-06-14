@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3
+# -*- coding: utf-8 -*-
 from tkinter import *
 import requests
 import time,re,requests,os,zipfile
