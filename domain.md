@@ -1,4 +1,4 @@
-1
+===================================================1
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="zh-cn">
@@ -24,7 +24,8 @@ window.location.href=strU;
 </body>
 </html>
  
-2
+===================================================2
+
 CTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <html><head>
 <meta http-equiv="refresh" content="59;url=http://www.baidu.com">
