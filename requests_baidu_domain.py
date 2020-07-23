@@ -18,7 +18,7 @@ for i in c:
      if error in a:
          print(ci,"error")
          continue
-     lb=re.findall(r"\"text-decoration\:none\;\"\>(.*)?\;\<\/a\>",a)     #baidu
+     lb=re.findall(r"\"text-decoration\:none\;position\:relative\;\"\>(.*)?\/", a)     #baidu
      #lb=re.findall(r"\<cite\>(.*?)</cite\>",a) 			     #360
      strlb=''.join(lb)
      z="不在"
