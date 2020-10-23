@@ -3,13 +3,15 @@ from scp import SCPClient
 def SCP(file):
     ssh=paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect(hostname="192.168.116.200", port=22, username='root', password="xiaoxue")
+    ssh.connect(hostname="192.168.116.200", port=22, username='zhangsan', password="zs")
     scp=SCPClient(ssh.get_transport(),socket_timeout=15.0)
+    os.chdir("C:\\Users\\Administrator\\")
     tar=tarfile.open(tarn,"w:gz")
     for i in file:
         tar.add(i)
     tar.close()
-    scp.put(tarn,"/mnt")
+    scp.put(tarn,"~")
+    os.remove(tarn)
     scp.close()
 wenjian = []
 def search(dir):
